@@ -1,0 +1,65 @@
+{
+  "input": {
+    "workflow": {
+      "1": {
+        "inputs": {
+          "filename": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice"
+        },
+        "class_type": "Qwen3TTSLoader",
+        "_meta": {
+          "title": "Qwen3TTSLoader"
+        }
+      },
+      "2": {
+        "inputs": {
+          "text": [
+            "4",
+            0
+          ],
+          "model": [
+            "1",
+            0
+          ],
+          "instruct": [
+            "5",
+            0
+          ]
+        },
+        "class_type": "Qwen3TTSCustomVoice",
+        "_meta": {
+          "title": "Qwen3TTSCustomVoice"
+        }
+      },
+      "3": {
+        "inputs": {
+          "audio": [
+            "2",
+            0
+          ]
+        },
+        "class_type": "PreviewAudio",
+        "_meta": {
+          "title": "PreviewAudio"
+        }
+      },
+      "4": {
+        "inputs": {
+          "filename": "I understand you want me to be your personal assistant and complete tasks using the available tools. However, I need more specific information about what task you'd like me to perform.\n\nCurrently, I have access to Google Sheets tools that allow me to:\n1. Get row(s) from a sheet\n2. Update a row in a sheet"
+        },
+        "class_type": "PrimitiveStringMultiline",
+        "_meta": {
+          "title": "Prompt text"
+        }
+      },
+      "5": {
+        "inputs": {
+          "text": "young 20 years old man"
+        },
+        "class_type": "PrimitiveStringMultiline",
+        "_meta": {
+          "title": "Voice description"
+        }
+      }
+    }
+  }
+}
